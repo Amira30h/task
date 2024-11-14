@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.parent{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: 0.5fr  1fr 1fr 0.5fr;
+    grid-template-areas:
+    "header header header header" 
+    "side main main main " 
+    "side content1 content2 content3 " 
+    "footer footer footer footer" 
+    ;
+}
+.header{
+background-color: dimgray;
+grid-area:header ;
+color: beige;
+font-size: 15px;
+ 
+}
+.list1 li{
+    list-style:none;
+    color: black;
+    display: inline-block;
+    margin-left: 100px;
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-left: 60px; 
+ }  
+ .list1 li a{
+color: black;
+text-decoration: none ;
+margin-left: 60px;
+} 
+.list1 li i{
+     
+    color: rgb(243, 243, 243)
+}
+.main{
+    width: 1150px;
+    height: 200px;
+ grid-area:main ;
+ }
+ .main img{
+    width: 1150px;
+    height: 200px;
+ }
+.side{
+ background-color: dimgrey;
+ grid-area:side ;
+ color: beige;
+  }
+.content1{
+    width: 375px;
+    height: 200px;
+ grid-area:content1;
+ }
+ .content1 img{
+    width: 375px;
+    height: 200px;
+ }
+.content2{
+     width: 375px;
+    height: 200px; 
+ grid-area:content2 ;
+}
+.content2 img{
+     width: 375px;
+    height: 200px; 
+}
+.content3{
+     width: 375px;
+    height: 200px; 
+ grid-area:content3 ;
+ }
+ .content3 img{
+    width: 375px;
+    height: 200px; 
+ }
+ .footer{
+ background-color: grey;
+ grid-area:footer ;
+ color: bisque;
+ }
+ .icon{
+     text-align: center;
+     color: black;
+ }
+    @media (max-width :568px){
+        parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 1fr 0.8fr 1fr 1fr 1fr 0.3fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "side"
+        "content1"
+        "content2"
+        "content3"
+        "footer"
+        
+        
+        ;
+        }
+    }
+       
